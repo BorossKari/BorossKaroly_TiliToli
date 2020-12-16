@@ -23,14 +23,13 @@ namespace TiliToli
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox.Show("Üdvözöllek! Nyomd meg az új játék gombot az OK után, hogy megpróbálhasd megoldani a kirakóst.", "Tologatós játék");
+            MessageBox.Show("Üdvözöllek! Az ablak bezárása után keverj, majd játssz!", "Tologatós játék");
         }
         int[] allas = { 1, 2, 3, 4, 5, 6, 7, 8, 0 };
         int[] kesz = { 1, 2, 3, 4, 5, 6, 7, 8, 0 };
         int lepesek = 0;
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            Random r = new Random();
             Button ezGomb = sender as Button;
             Button nullaGomb = (Button)FindName("Button0");
             
@@ -60,11 +59,10 @@ namespace TiliToli
                     MessageBoxResult result = MessageBox.Show("Sikerült megoldanod a kirakóst, gratulálok! " + lepesek + " lépésbe telt. Akar újat játszani?", "Siker!", MessageBoxButton.YesNo);
                     if (result == MessageBoxResult.Yes)
                     {
-                        MessageBox.Show("Újrakeverheti a kirakóst vagy tologathatja számlálás nélkül.", "Játsszunk még!");
                         lepesekmw.Content = 0;
                         lepesek = 0;
                     }
-                    if (result == MessageBoxResult.No)
+                    else
                     {
                         Application.Current.Shutdown();
                     }
@@ -75,7 +73,72 @@ namespace TiliToli
 
         private void keveres_Click(object sender, RoutedEventArgs e)
         {
+            if (!allas.SequenceEqual(kesz))
+            {
+                   MessageBoxResult result = MessageBox.Show("Biztosan új játékot akarsz kezdeni?", "Új játék?", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    lepesek = 0;
+                    lepesekmw.Content = 0;
+                    Random r = new Random();
+                    int keveres1 = r.Next(60, 401);
+                    for (int i = 0; i < keveres1;)
+                    {
+                        int valaszt = r.Next(1, 9);
+                        Convert.ToString(valaszt);
+                        Button gomb = (Button)FindName("Button" + valaszt);
+                        Button nullagomb = (Button)FindName("Button0");
+                        var fTav = Math.Abs(gomb.Margin.Top - nullagomb.Margin.Top);
+                        var vTav = Math.Abs(gomb.Margin.Left - nullagomb.Margin.Left);
 
+                        int gombfelirat = int.Parse(gomb.Content.ToString());
+                        int gombIndex = Array.IndexOf(allas, gombfelirat);
+                        int nullagombindex = Array.IndexOf(allas, 0);
+
+                        if ((fTav == 100 && vTav == 0) || (fTav == 0 && vTav == 100))
+                        {
+                            var cserehez = gomb.Margin;
+                            gomb.Margin = nullagomb.Margin;
+                            nullagomb.Margin = cserehez;
+
+                            allas[nullagombindex] = allas[gombIndex];
+                            allas[gombIndex] = 0;
+                            i++;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                lepesek = 0;
+                lepesekmw.Content = 0;
+                Random r = new Random();
+                int keveres1 = r.Next(60, 401);
+                for (int i = 0; i < keveres1;)
+                {
+                    int valaszt = r.Next(1, 9);
+                    Convert.ToString(valaszt);
+                    Button gomb = (Button)FindName("Button" + valaszt);
+                    Button nullagomb = (Button)FindName("Button0");
+                    var fTav = Math.Abs(gomb.Margin.Top - nullagomb.Margin.Top);
+                    var vTav = Math.Abs(gomb.Margin.Left - nullagomb.Margin.Left);
+
+                    int gombfelirat = int.Parse(gomb.Content.ToString());
+                    int gombIndex = Array.IndexOf(allas, gombfelirat);
+                    int nullagombindex = Array.IndexOf(allas, 0);
+
+                    if ((fTav == 100 && vTav == 0) || (fTav == 0 && vTav == 100))
+                    {
+                        var cserehez = gomb.Margin;
+                        gomb.Margin = nullagomb.Margin;
+                        nullagomb.Margin = cserehez;
+
+                        allas[nullagombindex] = allas[gombIndex];
+                        allas[gombIndex] = 0;
+                        i++;
+                    }
+                }
+            }
         }
     }
 }

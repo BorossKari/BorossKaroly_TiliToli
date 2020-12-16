@@ -56,3 +56,17 @@ C:\Users\user\Downloads\BKTiliToli\TiliToli\obj\Debug\TiliToli.Properties.Resour
 C:\Users\user\Downloads\BKTiliToli\TiliToli\obj\Debug\TiliToli.csproj.GenerateResource.cache
 C:\Users\user\Downloads\BKTiliToli\TiliToli\obj\Debug\TiliToli.exe
 C:\Users\user\Downloads\BKTiliToli\TiliToli\obj\Debug\TiliToli.pdb
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\bin\Debug\TiliToli.exe.config
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\bin\Debug\TiliToli.exe
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\bin\Debug\TiliToli.pdb
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli.csprojAssemblyReference.cache
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\MainWindow.g.cs
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\App.g.cs
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli_MarkupCompile.cache
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli_MarkupCompile.lref
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\MainWindow.baml
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli.g.resources
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli.Properties.Resources.resources
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli.csproj.GenerateResource.cache
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli.exe
+D:\sulis szar\2020-2021\KompProg\BKTiliToli\TiliToli\obj\Debug\TiliToli.pdb
